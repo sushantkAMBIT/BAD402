@@ -1,6 +1,6 @@
 """
 Academic Helper Bot
--------------------
+--------------------
 An intelligent agent that accepts academic queries via a Tkinter
 search box and returns responses from a locally-hosted Phi-3 Mini
 LLM served by Ollama over the LAN.
