@@ -80,5 +80,5 @@ for state in solution:
     print(f"Step {step}:")
     print(f"Action: {action}")
     print(f"Left Bank -> Missionaries: {m}, Cannibals: {c}, Boat: {boat}")
-    print("-----------------------------------")
+    print("------------------------------------")
     step += 1
