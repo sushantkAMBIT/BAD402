@@ -1,3 +1,4 @@
+
 # Water Jug Problem using Depth First Search
 
 jug1_capacity = int(input("Enter capacity of Jug 1: "))
