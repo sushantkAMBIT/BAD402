@@ -911,7 +911,46 @@ class ShadowStrikeGame:
             font=("Consolas", 14, "bold"),
         )
 
+    def draw_end_screen(self, title: str, color: str, footer: str) -> None:
+        self.canvas.create_rectangle(56, 160, WINDOW_WIDTH - 56, WINDOW_HEIGHT - 170, fill="#08111b", outline=color, width=3)
+        self.canvas.create_text(
+            WINDOW_WIDTH // 2,
+            250,
+            text=title,
+            fill=color,
+            font=("Consolas", 28, "bold"),
+        )
+        self.canvas.create_text(
+            WINDOW_WIDTH // 2,
+            306,
+            text=f"Score: {self.score}",
+            fill=TEXT_COLOR,
+            font=("Consolas", 18, "bold"),
+        )
+        self.canvas.create_text(
+            WINDOW_WIDTH // 2,
+            338,
+            text=f"Best Score: {self.best_score}",
+            fill=ACCENT_COLOR,
+            font=("Consolas", 15, "bold"),
+        )
+        self.canvas.create_text(
+            WINDOW_WIDTH // 2,
+            396,
+            text="AI used: random patrols + A* routing + vision and shooting + behind-kill logic.",
+            fill=TARGET_COLOR,
+            font=("Consolas", 12),
+        )
+        self.canvas.create_text(
+            WINDOW_WIDTH // 2,
+            446,
+            text=footer,
+            fill=TEXT_COLOR,
+            font=("Consolas", 14, "bold"),
+        )
 
+    def run(self) -> None:
+        self.root.mainloop()
 
 
 if __name__ == "__main__":
